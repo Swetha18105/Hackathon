@@ -1,0 +1,195 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #ffffff; /* Default background white */
+}
+
+/* Apply the background image only to the home page */
+body.home-page {
+    background: url('Bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Replace background with another image using .bg-replace */
+body.bg-replace {
+    background: url('newImage.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Ensure other pages do not get the home background, they'll use the default white*/
+/* body.other-page {  <-- we dont need this, just make the body default white
+   background: none;
+} */
+
+/* Header */
+header {
+    padding: 15px 0;
+    background-color: #03232b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header h1 {
+    margin-left: 10px;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #00aaff;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero .container {
+    display: flex;
+    align-items: center; /* Align content to the middle */
+    justify-content: flex-start; /* Move content to the left */
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 150px 20px; /* Adjust padding to move it slightly down */
+    min-height: 80vh;
+}
+
+/* Move text further left */
+.hero-content {
+    max-width: 50%;
+    padding-top: 10px;
+    margin-left: -50px; /* Move content more to the left */
+}
+
+/* Improve text visibility */
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #004080;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.features h2 {
+    font-size: 2rem;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 300px;
+}
+
+.feature-card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
